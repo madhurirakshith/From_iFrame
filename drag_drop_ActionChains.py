@@ -1,0 +1,16 @@
+from selenium import webdriver
+from selenium.webdriver import ActionChains
+driver = webdriver.Chrome(executable_path="D:\\Browser_drivers\\chromedriver.exe")
+driver.get("https://jqueryui.com/droppable")
+print("Entered URL")
+driver.implicitly_wait(30)
+framevar = driver.find_element_by_xpath("//iframe[@class='demo-frame']")
+driver.switch_to.frame(framevar)
+print("Switched to iFrame")
+src_drag = driver.find_element_by_id("draggable")
+print("Captured source value")
+dest_drag = driver.find_element_by_id("droppable")
+print("Captured destination value")
+a=ActionChains(driver)
+a.drag_and_drop(src_drag,dest_drag).perform()
+print("dragged and dropped successfully")
