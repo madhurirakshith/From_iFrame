@@ -9,4 +9,4 @@ w_h = driver.window_handles
 for i in w_h:
     if i!=c_w:
         driver.switch_to.window(i)
-c_w=driver.find_element_by_id("inputEmail").send_keys("TestWindows")
+driver.find_element_by_id("inputEmail").send_keys("TestWindows")
