@@ -7,7 +7,7 @@ driver.get("file:///C:/Users/Rakshith%20Yenadka/Desktop/.html")
 #print(var)
 
 #ele = driver.find_elements_by_xpath("//*[@id='123']/tbody/tr[1]")
-ele = driver.find_elements_by_xpath("//*[@id='123']/tbody/tr")
+ele = driver.find_elements_by_xpath("//*[@id='123']/tbody/tr/td")
 print(ele)
 # print(len(ele)) #returns length of the row
 for i in ele:

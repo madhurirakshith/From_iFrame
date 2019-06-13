@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver import ActionChains
-driver = webdriver.Chrome(executable_path="D:\\Browser_drivers\\chromedriver.exe")
+driver = webdriver.Chrome()
 driver.get("https://jqueryui.com/droppable")
 print("Entered URL")
 driver.implicitly_wait(30)
